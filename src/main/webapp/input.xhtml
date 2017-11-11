@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Input data</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></link>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"></link>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+</h:head>
+<h:body>
+    <h:form method="post" target="_top">
+        <table class="table table-responsive">
+            <tr>
+                <td>
+                    <h:inputText class="form-control" title="A" type="number" name="a" placeholder="A" step="any"
+                                 value="#{input.a}"></h:inputText>
+                </td>
+                <td>
+                    <h:inputText class="form-control" title="Start" type="number" name="start"
+                                 placeholder="Start of interval"
+                                 step="any"
+                                 value="#{input.start}"></h:inputText>
+                </td>
+                <td>
+                    <h:inputText class="form-control" title="End" type="number" name="end" placeholder="End of interval"
+                                 step="any"
+                                 value="#{input.end}"></h:inputText>
+                </td>
+                <td>
+                    <h:inputText class="form-control" title="Step" type="number" name="step"
+                                 placeholder="Delta of interval"
+                                 step="any"
+                                 value="#{input.step}"></h:inputText>
+                </td>
+                <td>
+                    <h:outputLabel for="submit" class="btn btn-success">Tabulate <i
+                            class="glyphicon glyphicon-chevron-right"></i></h:outputLabel>
+                    <h:commandButton action="#{input.tabulate}" id="submit" type="submit" value="Submit"
+                                     class="hidden"/>
+                </td>
+            </tr>
+        </table>
+    </h:form>
+</h:body>
+</html>
